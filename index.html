@@ -1,0 +1,98 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Importadora El Rebajón — productos seleccionados, precios especiales y pago contra entrega.">
+  <title>Importadora El Rebajón</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="topbar">
+    <div class="brand">
+      <div class="brand-mark">ER</div>
+      <div><strong>IMPORTADORA</strong><span>EL REBAJÓN</span></div>
+    </div>
+    <button class="cart-btn" id="openCart">🛒 Carrito <b id="cartCount">0</b></button>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div>
+        <p class="eyebrow">🔥 PRECIOS ESPECIALES • PAGO CONTRA ENTREGA</p>
+        <h1>Lo que quieres.<br><em>Al precio que buscas.</em></h1>
+        <p class="hero-text">Compra fácil, rápido y seguro. Elige tu producto, completa tus datos y envíanos tu pedido directamente por WhatsApp.</p>
+        <a class="cta" href="#productos">VER PRODUCTOS</a>
+      </div>
+      <div class="hero-card">
+        <span>OFERTAS</span>
+        <strong>🔥</strong>
+        <small>Compra desde cualquier lugar de Colombia</small>
+      </div>
+    </section>
+
+    <section class="trust">
+      <div>🚚 <b>Envíos</b><span>A todo Colombia</span></div>
+      <div>💵 <b>Contra entrega</b><span>Compra con confianza</span></div>
+      <div>📲 <b>WhatsApp</b><span>Pedido rápido</span></div>
+      <div>⭐ <b>Productos seleccionados</b><span>Calidad y buen precio</span></div>
+    </section>
+
+    <section class="products-section" id="productos">
+      <div class="section-head">
+        <div><p class="eyebrow">NUESTRA SELECCIÓN</p><h2>Productos que <span>sí valen la pena</span></h2></div>
+        <input id="search" type="search" placeholder="Buscar producto...">
+      </div>
+      <div class="grid" id="products"></div>
+    </section>
+  </main>
+
+  <div class="modal hidden" id="productModal">
+    <div class="modal-box product-modal">
+      <button class="close" data-close="productModal">×</button>
+      <div class="gallery">
+        <img id="mainImage" src="" alt="">
+        <div class="thumbs" id="thumbs"></div>
+      </div>
+      <div class="product-info">
+        <p class="eyebrow">IMPORTADORA EL REBAJÓN</p>
+        <h2 id="modalName"></h2>
+        <div class="price" id="modalPrice"></div>
+        <p id="modalDesc"></p>
+        <ul id="modalFeatures"></ul>
+        <button class="cta full" id="modalAdd">AÑADIR AL CARRITO</button>
+      </div>
+    </div>
+  </div>
+
+  <aside class="cart hidden" id="cartPanel">
+    <div class="cart-head"><h2>Tu pedido</h2><button class="close" id="closeCart">×</button></div>
+    <div id="cartItems"></div>
+    <div class="cart-total"><span>Total</span><strong id="cartTotal">$0</strong></div>
+    <button class="cta full" id="checkoutBtn">CONTINUAR PEDIDO</button>
+  </aside>
+  <div class="overlay hidden" id="overlay"></div>
+
+  <div class="modal hidden" id="checkoutModal">
+    <div class="modal-box checkout">
+      <button class="close" data-close="checkoutModal">×</button>
+      <p class="eyebrow">ÚLTIMO PASO</p>
+      <h2>Datos para tu pedido</h2>
+      <p>Completa los datos y el pedido se abrirá listo para enviar por WhatsApp.</p>
+      <form id="checkoutForm">
+        <input required name="name" placeholder="Nombre completo">
+        <input required name="phone" type="tel" placeholder="Número de celular">
+        <input required name="city" placeholder="Ciudad">
+        <input required name="address" placeholder="Dirección de entrega">
+        <textarea name="note" placeholder="Barrio, referencia u observación (opcional)"></textarea>
+        <button class="cta full" type="submit">ENVIAR PEDIDO POR WHATSAPP</button>
+      </form>
+      <small class="notice">⚠️ Antes de publicar, reemplaza el número de WhatsApp en <b>script.js</b>.</small>
+    </div>
+  </div>
+
+  <a class="wa" id="waFloat" href="#" aria-label="WhatsApp">◉</a>
+  <footer><strong>IMPORTADORA EL REBAJÓN</strong><span>Compra fácil • Pago contra entrega • Envíos nacionales</span></footer>
+  <script src="script.js"></script>
+</body>
+</html>
