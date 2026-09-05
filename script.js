@@ -1,5 +1,4 @@
 // IMPORTADORA EL REBAJÓN
-
 const WHATSAPP_NUMBER = "573147636825";
 
 const products = [
@@ -67,7 +66,7 @@ let selectedProduct = null;
 
 
 /* =========================
-   FORMATO DE DINERO
+   DINERO
 ========================= */
 
 const money = n =>
@@ -79,13 +78,15 @@ const money = n =>
 
 
 /* =========================
-   CÁLCULO DE DESCUENTO
+   DESCUENTOS
 ========================= */
 
 function getDiscount(price, oldPrice) {
   if (!oldPrice || oldPrice <= price) return 0;
 
-  return Math.round(((oldPrice - price) / oldPrice) * 100);
+  return Math.round(
+    ((oldPrice - price) / oldPrice) * 100
+  );
 }
 
 function getSaving(price, oldPrice) {
@@ -107,8 +108,15 @@ function renderProducts(list = products) {
 
   el.innerHTML = list.map(p => {
 
-    const discount = getDiscount(p.price, p.oldPrice);
-    const saving = getSaving(p.price, p.oldPrice);
+    const discount = getDiscount(
+      p.price,
+      p.oldPrice
+    );
+
+    const saving = getSaving(
+      p.price,
+      p.oldPrice
+    );
 
     return `
       <article class="card">
@@ -131,6 +139,20 @@ function renderProducts(list = products) {
 
           <h3>${p.name}</h3>
 
+          <div class="product-rating">
+
+            <span class="stars">
+              ★★★★★
+            </span>
+
+            <b>4.9</b>
+
+            <span class="rating-text">
+              Producto seleccionado
+            </span>
+
+          </div>
+
           <div class="desc">
             ${p.desc}
           </div>
@@ -139,7 +161,11 @@ function renderProducts(list = products) {
 
             ${
               p.oldPrice
-                ? `<div class="old-price">${money(p.oldPrice)}</div>`
+                ? `
+                  <div class="old-price">
+                    ${money(p.oldPrice)}
+                  </div>
+                `
                 : ""
             }
 
@@ -165,7 +191,10 @@ function renderProducts(list = products) {
               VER DETALLES
             </button>
 
-            <button class="add" data-add="${p.id}">
+            <button
+              class="add"
+              data-add="${p.id}"
+            >
               AÑADIR
             </button>
 
@@ -186,22 +215,53 @@ function renderProducts(list = products) {
 
 function openProduct(id) {
 
-  const p = products.find(x => x.id === id);
+  const p = products.find(
+    x => x.id === id
+  );
 
   if (!p) return;
 
   selectedProduct = p;
 
-  const discount = getDiscount(p.price, p.oldPrice);
-  const saving = getSaving(p.price, p.oldPrice);
+  const discount = getDiscount(
+    p.price,
+    p.oldPrice
+  );
 
-  document.querySelector("#modalName").textContent = p.name;
+  const saving = getSaving(
+    p.price,
+    p.oldPrice
+  );
+
+  document.querySelector("#modalName").innerHTML = `
+
+    ${p.name}
+
+    <div class="product-rating modal-rating">
+
+      <span class="stars">
+        ★★★★★
+      </span>
+
+      <b>4.9</b>
+
+      <span class="rating-text">
+        Producto seleccionado
+      </span>
+
+    </div>
+
+  `;
 
   document.querySelector("#modalPrice").innerHTML = `
 
     ${
       p.oldPrice
-        ? `<div class="old-price">${money(p.oldPrice)}</div>`
+        ? `
+          <div class="old-price">
+            ${money(p.oldPrice)}
+          </div>
+        `
         : ""
     }
 
@@ -211,13 +271,18 @@ function openProduct(id) {
 
     ${
       discount
-        ? `<div class="saving">${discount}% OFF • AHORRAS ${money(saving)}</div>`
+        ? `
+          <div class="saving">
+            ${discount}% OFF • AHORRAS ${money(saving)}
+          </div>
+        `
         : ""
     }
 
   `;
 
-  document.querySelector("#modalDesc").textContent = p.desc;
+  document.querySelector("#modalDesc").textContent =
+    p.desc;
 
   document.querySelector("#modalFeatures").innerHTML =
     p.features
@@ -251,7 +316,8 @@ function openProduct(id) {
 
 function setMain(src) {
 
-  const mainImage = document.querySelector("#mainImage");
+  const mainImage =
+    document.querySelector("#mainImage");
 
   if (!mainImage) return;
 
@@ -274,7 +340,9 @@ function setMain(src) {
 
 function addToCart(id) {
 
-  const item = cart.find(x => x.id === id);
+  const item = cart.find(
+    x => x.id === id
+  );
 
   if (item) {
 
@@ -282,7 +350,9 @@ function addToCart(id) {
 
   } else {
 
-    const p = products.find(x => x.id === id);
+    const p = products.find(
+      x => x.id === id
+    );
 
     if (!p) return;
 
@@ -293,18 +363,23 @@ function addToCart(id) {
   }
 
   renderCart();
-
   openCart();
 }
 
 
 function renderCart() {
 
-  const cartCount = document.querySelector("#cartCount");
-  const el = document.querySelector("#cartItems");
-  const totalEl = document.querySelector("#cartTotal");
+  const cartCount =
+    document.querySelector("#cartCount");
 
-  if (!cartCount || !el || !totalEl) return;
+  const el =
+    document.querySelector("#cartItems");
+
+  const totalEl =
+    document.querySelector("#cartTotal");
+
+  if (!cartCount || !el || !totalEl)
+    return;
 
   cartCount.textContent =
     cart.reduce(
@@ -317,62 +392,66 @@ function renderCart() {
     el.innerHTML =
       '<p style="color:#888;padding:25px 0">Tu carrito está vacío.</p>';
 
-    totalEl.textContent = money(0);
+    totalEl.textContent =
+      money(0);
 
     return;
   }
 
-  el.innerHTML = cart.map(x => `
+  el.innerHTML =
+    cart.map(x => `
 
-    <div class="cart-item">
+      <div class="cart-item">
 
-      <img
-        src="${x.images[0]}"
-        alt="${x.name}"
-      >
+        <img
+          src="${x.images[0]}"
+          alt="${x.name}"
+        >
 
-      <div>
+        <div>
 
-        <h4>${x.name}</h4>
+          <h4>${x.name}</h4>
 
-        <small>
-          ${money(x.price)} × ${x.qty}
-        </small>
+          <small>
+            ${money(x.price)} × ${x.qty}
+          </small>
+
+        </div>
+
+        <div class="qty">
+
+          <button data-dec="${x.id}">
+            −
+          </button>
+
+          <b>
+            ${x.qty}
+          </b>
+
+          <button data-inc="${x.id}">
+            +
+          </button>
+
+        </div>
 
       </div>
 
-      <div class="qty">
+    `).join("");
 
-        <button data-dec="${x.id}">
-          −
-        </button>
+  const total =
+    cart.reduce(
+      (s, x) =>
+        s + x.price * x.qty,
+      0
+    );
 
-        <b>
-          ${x.qty}
-        </b>
-
-        <button data-inc="${x.id}">
-          +
-        </button>
-
-      </div>
-
-    </div>
-
-  `).join("");
-
-  const total = cart.reduce(
-    (s, x) =>
-      s + x.price * x.qty,
-    0
-  );
-
-  totalEl.textContent = money(total);
+  totalEl.textContent =
+    money(total);
 }
 
 
 /* =========================
-   ABRIR / CERRAR CARRITO
+   CARRITO ABRIR / CERRAR
 ========================= */
 
 function openCart() {
@@ -404,12 +483,13 @@ function closeCart() {
 
 
 /* =========================
-   CERRAR MODALES
+   MODALES
 ========================= */
 
 function closeModal(id) {
 
-  const modal = document.querySelector("#" + id);
+  const modal =
+    document.querySelector("#" + id);
 
   if (!modal) return;
 
@@ -421,88 +501,113 @@ function closeModal(id) {
    EVENTOS
 ========================= */
 
-document.addEventListener("click", e => {
+document.addEventListener(
+  "click",
+  e => {
 
-  const open = e.target.closest("[data-open]");
+    const open =
+      e.target.closest("[data-open]");
 
-  if (open) {
-    openProduct(open.dataset.open);
-  }
-
-
-  const add = e.target.closest("[data-add]");
-
-  if (add) {
-    addToCart(add.dataset.add);
-  }
-
-
-  const thumb = e.target.closest("[data-img]");
-
-  if (thumb) {
-    setMain(thumb.dataset.img);
-  }
-
-
-  const inc = e.target.closest("[data-inc]");
-
-  if (inc) {
-
-    const item = cart.find(
-      x => x.id === inc.dataset.inc
-    );
-
-    if (item) {
-      item.qty++;
+    if (open) {
+      openProduct(open.dataset.open);
     }
 
-    renderCart();
-  }
 
+    const add =
+      e.target.closest("[data-add]");
 
-  const dec = e.target.closest("[data-dec]");
-
-  if (dec) {
-
-    const item = cart.find(
-      x => x.id === dec.dataset.dec
-    );
-
-    if (item) {
-      item.qty--;
+    if (add) {
+      addToCart(add.dataset.add);
     }
 
-    if (item && item.qty <= 0) {
 
-      cart = cart.filter(
-        x => x.id !== dec.dataset.dec
+    const thumb =
+      e.target.closest("[data-img]");
+
+    if (thumb) {
+      setMain(thumb.dataset.img);
+    }
+
+
+    const inc =
+      e.target.closest("[data-inc]");
+
+    if (inc) {
+
+      const item =
+        cart.find(
+          x => x.id === inc.dataset.inc
+        );
+
+      if (item) {
+        item.qty++;
+      }
+
+      renderCart();
+    }
+
+
+    const dec =
+      e.target.closest("[data-dec]");
+
+    if (dec) {
+
+      const item =
+        cart.find(
+          x => x.id === dec.dataset.dec
+        );
+
+      if (item) {
+        item.qty--;
+      }
+
+      if (
+        item &&
+        item.qty <= 0
+      ) {
+
+        cart =
+          cart.filter(
+            x =>
+              x.id !== dec.dataset.dec
+          );
+      }
+
+      renderCart();
+    }
+
+
+    const close =
+      e.target.closest("[data-close]");
+
+    if (close) {
+      closeModal(
+        close.dataset.close
       );
     }
 
-    renderCart();
   }
-
-
-  const close = e.target.closest("[data-close]");
-
-  if (close) {
-    closeModal(close.dataset.close);
-  }
-
-});
+);
 
 
 /* =========================
-   BOTÓN AÑADIR DEL MODAL
+   BOTÓN DEL MODAL
 ========================= */
 
-document.querySelector("#modalAdd").onclick = () => {
+document.querySelector(
+  "#modalAdd"
+).onclick = () => {
 
-  if (!selectedProduct) return;
+  if (!selectedProduct)
+    return;
 
-  addToCart(selectedProduct.id);
+  addToCart(
+    selectedProduct.id
+  );
 
-  closeModal("productModal");
+  closeModal(
+    "productModal"
+  );
 };
 
 
@@ -510,13 +615,19 @@ document.querySelector("#modalAdd").onclick = () => {
    BOTONES DEL CARRITO
 ========================= */
 
-document.querySelector("#openCart").onclick =
+document.querySelector(
+  "#openCart"
+).onclick =
   openCart;
 
-document.querySelector("#closeCart").onclick =
+document.querySelector(
+  "#closeCart"
+).onclick =
   closeCart;
 
-document.querySelector("#overlay").onclick =
+document.querySelector(
+  "#overlay"
+).onclick =
   closeCart;
 
 
@@ -524,7 +635,9 @@ document.querySelector("#overlay").onclick =
    CHECKOUT
 ========================= */
 
-document.querySelector("#checkoutBtn").onclick = () => {
+document.querySelector(
+  "#checkoutBtn"
+).onclick = () => {
 
   if (!cart.length) {
 
@@ -548,64 +661,66 @@ document.querySelector("#checkoutBtn").onclick = () => {
    BUSCADOR
 ========================= */
 
-document
-  .querySelector("#search")
-  .addEventListener(
-    "input",
-    e => {
+document.querySelector(
+  "#search"
+).addEventListener(
+  "input",
+  e => {
 
-      const q =
-        e.target.value
-          .toLowerCase()
-          .trim();
+    const q =
+      e.target.value
+        .toLowerCase()
+        .trim();
 
-      renderProducts(
-        products.filter(p =>
-          (
-            p.name +
-            " " +
-            p.desc
-          )
-            .toLowerCase()
-            .includes(q)
+    renderProducts(
+      products.filter(p =>
+        (
+          p.name +
+          " " +
+          p.desc
         )
-      );
+          .toLowerCase()
+          .includes(q)
+      )
+    );
 
-    }
-  );
+  }
+);
 
 
 /* =========================
-   ENVIAR PEDIDO POR WHATSAPP
+   PEDIDO WHATSAPP
 ========================= */
 
-document
-  .querySelector("#checkoutForm")
-  .addEventListener(
-    "submit",
-    e => {
+document.querySelector(
+  "#checkoutForm"
+).addEventListener(
+  "submit",
+  e => {
 
-      e.preventDefault();
+    e.preventDefault();
 
-      const data =
-        new FormData(e.currentTarget);
-
-
-      const lines =
-        cart.map(x =>
-          `• ${x.name} | Cantidad: ${x.qty} | ${money(x.price * x.qty)}`
-        ).join("\n");
+    const data =
+      new FormData(
+        e.currentTarget
+      );
 
 
-      const total =
-        cart.reduce(
-          (s, x) =>
-            s + x.price * x.qty,
-          0
-        );
+    const lines =
+      cart.map(x =>
+        `• ${x.name} | Cantidad: ${x.qty} | ${money(x.price * x.qty)}`
+      ).join("\n");
 
 
-      const msg =
+    const total =
+      cart.reduce(
+        (s, x) =>
+          s + x.price * x.qty,
+        0
+      );
+
+
+    const msg =
 `Hola, Importadora El Rebajón. Quiero realizar este pedido:
 
 ${lines}
@@ -622,27 +737,28 @@ Observación: ${data.get("note") || "Ninguna"}
 Pago: Contra entrega`;
 
 
-      window.open(
-        `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(msg)}`,
-        "_blank"
-      );
+    window.open(
+      `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(msg)}`,
+      "_blank"
+    );
 
-    }
-  );
+  }
+);
 
 
 /* =========================
    WHATSAPP FLOTANTE
 ========================= */
 
-document.querySelector("#waFloat").href =
+document.querySelector(
+  "#waFloat"
+).href =
   `https://wa.me/${WHATSAPP_NUMBER}`;
 
 
 /* =========================
-   INICIAR TIENDA
+   INICIAR
 ========================= */
 
 renderProducts();
-
 renderCart();
