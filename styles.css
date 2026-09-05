@@ -132,3 +132,202 @@
     font-size: 21px;
   }
 }
+/* =========================================
+   VALORACIÓN Y CONFIANZA DEL PRODUCTO
+========================================= */
+
+.product-rating {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+  margin: 8px 0 10px;
+  flex-wrap: wrap;
+}
+
+.stars {
+  color: #f47b20;
+  font-size: 15px;
+  letter-spacing: 1px;
+}
+
+.product-rating b {
+  color: #fff;
+  font-size: 13px;
+}
+
+.rating-text {
+  color: #888;
+  font-size: 11px;
+}
+
+.modal-rating {
+  margin-top: 10px;
+  margin-bottom: 15px;
+}
+
+
+/* =========================================
+   PRECIOS
+========================================= */
+
+.price-box {
+  margin: 12px 0 16px;
+}
+
+.old-price {
+  color: #888;
+  font-size: 13px;
+  text-decoration: line-through;
+  margin-bottom: 4px;
+}
+
+.price-box .price,
+.product-info .price {
+  color: #f47b20;
+  font-size: 24px;
+  font-weight: 900;
+  line-height: 1.1;
+}
+
+.saving {
+  display: inline-block;
+  margin-top: 7px;
+  padding: 5px 9px;
+  border-radius: 6px;
+  background: rgba(244,123,32,.12);
+  color: #f47b20;
+  font-size: 11px;
+  font-weight: 900;
+  letter-spacing: .3px;
+}
+
+
+/* =========================================
+   ETIQUETA DE DESCUENTO
+========================================= */
+
+.badge {
+  position: absolute;
+  top: 12px;
+  left: 12px;
+  z-index: 3;
+  background: #f47b20;
+  color: #111;
+  padding: 6px 9px;
+  border-radius: 6px;
+  font-size: 11px;
+  font-weight: 900;
+}
+
+
+/* =========================================
+   COMPRA CON CONFIANZA
+========================================= */
+
+.trust {
+  background: #f47b20;
+  padding: 22px 5%;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 14px;
+}
+
+.trust-card {
+  background: #111;
+  border: 1px solid rgba(255,255,255,.12);
+  border-radius: 16px;
+  padding: 18px;
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  color: white;
+  box-shadow: 0 8px 20px rgba(0,0,0,.18);
+  transition: transform .2s ease,
+              box-shadow .2s ease;
+}
+
+.trust-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 28px rgba(0,0,0,.28);
+}
+
+.trust-icon {
+  width: 48px;
+  height: 48px;
+  min-width: 48px;
+  border-radius: 13px;
+  background: #f47b20;
+  color: #111;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.trust-icon svg {
+  width: 30px;
+  height: 30px;
+}
+
+.trust-card b {
+  display: block;
+  font-size: 15px;
+  margin-bottom: 4px;
+}
+
+.trust-card span {
+  display: block;
+  color: #bdbdbd;
+  font-size: 12px;
+  line-height: 1.4;
+}
+
+
+/* =========================================
+   MÓVIL
+========================================= */
+
+@media (max-width: 900px) {
+
+  .trust {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+}
+
+
+@media (max-width: 560px) {
+
+  .trust {
+    padding: 15px;
+    gap: 10px;
+  }
+
+  .trust-card {
+    padding: 13px;
+    gap: 10px;
+  }
+
+  .trust-icon {
+    width: 40px;
+    height: 40px;
+    min-width: 40px;
+  }
+
+  .trust-icon svg {
+    width: 25px;
+    height: 25px;
+  }
+
+  .trust-card b {
+    font-size: 12px;
+  }
+
+  .trust-card span {
+    font-size: 10px;
+  }
+
+  .price-box .price {
+    font-size: 21px;
+  }
+
+}
