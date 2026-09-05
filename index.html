@@ -1,36 +1,24 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="es">
-
 <head>
-
   <meta charset="UTF-8">
-
-  <meta
-    name="viewport"
-    content="width=device-width, initial-scale=1.0"
-  >
-
-  <meta
-    name="description"
-    content="Importadora El Rebajón — ofertas, productos seleccionados y pago contra entrega."
-  >
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
   <title>Importadora El Rebajón</title>
 
-  <link
-    rel="stylesheet"
-    href="styles.css"
+  <meta
+    name="description"
+    content="Importadora El Rebajón - Productos seleccionados, ofertas y pago contra entrega."
   >
 
+  <link rel="stylesheet" href="styles.css">
 </head>
-
 
 <body>
 
-
-  <!-- =========================
+  <!-- =========================================
        HEADER
-  ========================== -->
+  ========================================== -->
 
   <header class="topbar">
 
@@ -43,165 +31,213 @@
       >
 
       <div>
-
-        <strong>
-          IMPORTADORA
-        </strong>
-
-        <span>
-          EL REBAJÓN
-        </span>
-
+        <strong>IMPORTADORA</strong>
+        <span>EL REBAJÓN</span>
       </div>
 
     </div>
 
-
     <button
       class="cart-btn"
       id="openCart"
+      type="button"
     >
-
       🛒 Carrito
-
-      <b id="cartCount">
-        0
-      </b>
-
+      <b id="cartCount">0</b>
     </button>
 
   </header>
 
 
-
-  <!-- =========================
-       CONTENIDO
-  ========================== -->
+  <!-- =========================================
+       HERO
+  ========================================== -->
 
   <main>
-
-
-    <!-- =========================
-         PORTADA / OFERTAS
-    ========================== -->
 
     <section class="hero">
 
       <div class="hero-content">
 
         <p class="eyebrow">
-          🔥 OFERTAS EXCLUSIVAS • PAGO CONTRA ENTREGA
+          IMPORTADORA EL REBAJÓN
         </p>
-
 
         <h1>
-
-          ¡NO TE PIERDAS<br>
-
-          <em>
-            ESTAS OFERTAS!
-          </em>
-
+          GRANDES PRODUCTOS.
+          <em>MEJORES PRECIOS.</em>
         </h1>
 
-
-        <p class="hero-text">
-
-          Productos seleccionados, precios especiales y oportunidades
-          que realmente valen la pena.
-
-          <br><br>
-
-          Compra fácil, recibe en tu ciudad y
-          <strong>
-            paga contra entrega.
-          </strong>
-
+        <p>
+          Encuentra productos seleccionados para tu hogar,
+          vehículo, tecnología y mucho más.
+          <strong>Compra fácil y paga contra entrega.</strong>
         </p>
-
 
         <div class="hero-buttons">
 
-
           <a
-            class="cta"
             href="#productos"
+            class="cta"
+            id="showProducts"
           >
-
-            🛍️ VER PRODUCTOS
-
+            VER PRODUCTOS
           </a>
 
-
           <a
+            href="#"
             class="hero-whatsapp"
-            href="https://wa.me/573147636825"
+            id="heroWhatsapp"
             target="_blank"
             rel="noopener"
           >
-
-            <svg
-              viewBox="0 0 32 32"
-              aria-hidden="true"
-            >
-
-              <path
-                fill="currentColor"
-                d="M19.11 17.23c-.28-.14-1.65-.81-1.9-.9-.25-.09-.44-.14-.62.14-.18.28-.71.9-.87 1.08-.16.18-.32.21-.6.07-.28-.14-1.17-.43-2.23-1.38-.82-.73-1.38-1.63-1.54-1.9-.16-.28-.02-.43.12-.57.13-.13.28-.32.42-.48.14-.16.18-.28.28-.46.09-.18.05-.35-.02-.49-.07-.14-.62-1.5-.85-2.06-.22-.54-.45-.47-.62-.48h-.53c-.18 0-.48.07-.74.35-.25.28-.97.95-.97 2.32s.99 2.69 1.13 2.87c.14.18 1.95 2.98 4.73 4.18.66.29 1.17.46 1.57.59.66.21 1.65-.67 1.88-1.32.23-.65.23-1.2.16-1.32-.07-.12-.25-.18-.53-.32z"
-              />
-
-              <path
-                fill="currentColor"
-                d="M16.03 3.2c-7.07 0-12.8 5.73-12.8 12.8 0 2.26.59 4.46 1.72 6.4L3.2 28.8l6.59-1.72a12.76 12.76 0 0 0 6.24 1.62h.01c7.06 0 12.8-5.74 12.8-12.8S23.1 3.2 16.03 3.2zm0 23.4h-.01a10.6 10.6 0 0 1-5.4-1.48l-.39-.23-3.91 1.02 1.04-3.81-.25-.39a10.6 10.6 0 1 1 8.92 4.89z"
-              />
-
-            </svg>
-
-            HABLAR POR WHATSAPP
-
+            💬 HABLAR POR WHATSAPP
           </a>
-
 
         </div>
 
       </div>
-
 
 
       <div class="hero-card">
 
         <div class="hero-offer">
 
-          <span>
-            SOLO POR TIEMPO LIMITADO
-          </span>
+          <span>OFERTAS</span>
 
-          <strong>
-            🔥
-          </strong>
+          <strong>🔥</strong>
 
           <b>
-            PRECIOS<br>
-            ESPECIALES
+            PRECIOS ESPECIALES
           </b>
 
           <small>
-            Envíos a toda Colombia
+            Unidades disponibles según inventario
           </small>
 
         </div>
 
       </div>
 
+    </section>
+
+
+    <!-- =========================================
+         CONFIANZA
+    ========================================== -->
+
+    <section class="trust">
+
+      <div class="trust-card">
+
+        <div class="trust-icon">
+
+          <svg
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+          >
+            <path d="M3 7h11v10H3z"/>
+            <path d="M14 10h4l3 3v4h-7z"/>
+            <circle cx="7" cy="19" r="2"/>
+            <circle cx="18" cy="19" r="2"/>
+          </svg>
+
+        </div>
+
+        <div>
+          <b>Envíos nacionales</b>
+          <span>Enviamos a diferentes ciudades de Colombia.</span>
+        </div>
+
+      </div>
+
+
+      <div class="trust-card">
+
+        <div class="trust-icon">
+
+          <svg
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+          >
+            <rect
+              x="3"
+              y="5"
+              width="18"
+              height="14"
+              rx="2"
+            />
+            <path d="M3 10h18"/>
+          </svg>
+
+        </div>
+
+        <div>
+          <b>Pago contra entrega</b>
+          <span>Consulta disponibilidad para tu ciudad.</span>
+        </div>
+
+      </div>
+
+
+      <div class="trust-card">
+
+        <div class="trust-icon">
+
+          <svg
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+          >
+            <path
+              d="M21 11.5a8.4 8.4 0 0 1-9 8.5 9.5 9.5 0 0 1-4-.9L3 21l1.9-4.6A8.5 8.5 0 1 1 21 11.5z"
+            />
+          </svg>
+
+        </div>
+
+        <div>
+          <b>Atención por WhatsApp</b>
+          <span>Resolvemos tus dudas antes de realizar tu pedido.</span>
+        </div>
+
+      </div>
+
+
+      <div class="trust-card">
+
+        <div class="trust-icon">
+
+          <svg
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+          >
+            <path d="M12 3l7 4v5c0 4.5-3 7.5-7 9-4-1.5-7-4.5-7-9V7z"/>
+            <path d="M9 12l2 2 4-4"/>
+          </svg>
+
+        </div>
+
+        <div>
+          <b>Productos seleccionados</b>
+          <span>Trabajamos para ofrecer productos atractivos y útiles.</span>
+        </div>
+
+      </div>
 
     </section>
 
 
-
-    <!-- =========================
+    <!-- =========================================
          PRODUCTOS
-         OCULTOS AL INICIO
-    ========================== -->
+    ========================================== -->
 
     <section
       class="products-section"
@@ -214,23 +250,20 @@
         <div>
 
           <p class="eyebrow">
-            NUESTRA SELECCIÓN
+            IMPORTADORA EL REBAJÓN
           </p>
 
           <h2>
-            Productos que
-            <span>
-              sí valen la pena
-            </span>
+            PRODUCTOS EN <span>OFERTA</span>
           </h2>
 
         </div>
 
-
         <input
-          id="search"
           type="search"
+          id="search"
           placeholder="Buscar producto..."
+          autocomplete="off"
         >
 
       </div>
@@ -241,494 +274,473 @@
         id="products"
       ></div>
 
-
     </section>
 
 
+    <!-- =========================================
+         MODAL PRODUCTO
+    ========================================== -->
 
-    <!-- =========================
-         CONFIANZA
-    ========================== -->
+    <div
+      class="modal hidden"
+      id="productModal"
+    >
 
-    <section class="trust">
+      <div class="modal-box">
 
-
-      <div class="trust-card">
-
-        <div class="trust-icon">
-
-          <svg
-            viewBox="0 0 64 64"
-            aria-hidden="true"
-          >
-
-            <path
-              d="M7 18h34v27H7z"
-              fill="none"
-              stroke="currentColor"
-              stroke-width="4"
-            />
-
-            <path
-              d="M41 27h9l7 8v10H41z"
-              fill="none"
-              stroke="currentColor"
-              stroke-width="4"
-            />
-
-            <circle
-              cx="20"
-              cy="48"
-              r="5"
-              fill="none"
-              stroke="currentColor"
-              stroke-width="4"
-            />
-
-            <circle
-              cx="49"
-              cy="48"
-              r="5"
-              fill="none"
-              stroke="currentColor"
-              stroke-width="4"
-            />
-
-          </svg>
-
-        </div>
+        <button
+          class="close"
+          data-close="productModal"
+          type="button"
+          aria-label="Cerrar"
+        >
+          ×
+        </button>
 
 
-        <div>
+        <div class="product-modal">
 
-          <b>
-            Envíos nacionales
-          </b>
+          <div class="gallery">
 
-          <span>
-            Recibe tu pedido en cualquier lugar de Colombia
-          </span>
+            <img
+              id="mainImage"
+              src=""
+              alt="Producto"
+            >
+
+            <div
+              class="thumbs"
+              id="thumbs"
+            ></div>
+
+          </div>
+
+
+          <div class="product-info">
+
+            <h2 id="modalName"></h2>
+
+            <div id="modalPrice"></div>
+
+            <p id="modalDesc"></p>
+
+            <ul id="modalFeatures"></ul>
+
+            <button
+              class="cta full"
+              id="modalAdd"
+              type="button"
+            >
+              🛒 AÑADIR AL CARRITO
+            </button>
+
+          </div>
 
         </div>
 
       </div>
 
+    </div>
 
 
-      <div class="trust-card">
+    <!-- =========================================
+         CARRITO
+    ========================================== -->
 
-        <div class="trust-icon">
+    <aside
+      class="cart hidden"
+      id="cartPanel"
+    >
 
-          <svg
-            viewBox="0 0 64 64"
-            aria-hidden="true"
-          >
+      <div class="cart-head">
 
-            <rect
-              x="8"
-              y="17"
-              width="48"
-              height="31"
-              rx="5"
-              fill="none"
-              stroke="currentColor"
-              stroke-width="4"
-            />
+        <h2>
+          Tu pedido
+        </h2>
 
-            <path
-              d="M8 27h48"
-              stroke="currentColor"
-              stroke-width="4"
-            />
-
-            <path
-              d="M20 39h13"
-              stroke="currentColor"
-              stroke-width="4"
-              stroke-linecap="round"
-            />
-
-            <circle
-              cx="45"
-              cy="39"
-              r="5"
-              fill="none"
-              stroke="currentColor"
-              stroke-width="4"
-            />
-
-          </svg>
-
-        </div>
-
-
-        <div>
-
-          <b>
-            Pago contra entrega
-          </b>
-
-          <span>
-            Paga cuando recibas tu pedido
-          </span>
-
-        </div>
+        <button
+          class="close"
+          id="closeCart"
+          type="button"
+          aria-label="Cerrar carrito"
+        >
+          ×
+        </button>
 
       </div>
 
 
-
-      <div class="trust-card">
-
-        <div class="trust-icon">
-
-          <svg
-            viewBox="0 0 64 64"
-            aria-hidden="true"
-          >
-
-            <path
-              d="M32 8c-13 0-24 10-24 23 0 5 2 10 5 14L9 56l12-4c3 2 7 3 11 3 13 0 24-10 24-24S45 8 32 8z"
-              fill="none"
-              stroke="currentColor"
-              stroke-width="4"
-            />
-
-            <path
-              d="M22 24c1 8 9 16 17 18l4-5-6-3-3 3c-3-2-6-5-8-8l3-3-3-6-4 4z"
-              fill="currentColor"
-            />
-
-          </svg>
-
-        </div>
+      <div id="cartItems"></div>
 
 
-        <div>
+      <div class="cart-total">
 
-          <b>
-            Atención por WhatsApp
-          </b>
+        <span>
+          Total
+        </span>
 
-          <span>
-            Haz tu pedido de forma rápida y sencilla
-          </span>
-
-        </div>
+        <strong id="cartTotal">
+          $0
+        </strong>
 
       </div>
 
 
+      <button
+        class="cta full"
+        id="checkoutBtn"
+        type="button"
+      >
+        CONTINUAR PEDIDO
+      </button>
 
-      <div class="trust-card">
+    </aside>
 
-        <div class="trust-icon">
 
-          <svg
-            viewBox="0 0 64 64"
-            aria-hidden="true"
+    <div
+      class="overlay hidden"
+      id="overlay"
+    ></div>
+
+
+    <!-- =========================================
+         CHECKOUT
+    ========================================== -->
+
+    <div
+      class="modal hidden"
+      id="checkoutModal"
+    >
+
+      <div class="modal-box checkout">
+
+        <button
+          class="close"
+          data-close="checkoutModal"
+          type="button"
+          aria-label="Cerrar"
+        >
+          ×
+        </button>
+
+
+        <h2>
+          Datos de entrega
+        </h2>
+
+        <p>
+          Completa tus datos y continuaremos tu pedido por WhatsApp.
+        </p>
+
+
+        <form id="checkoutForm">
+
+          <input
+            type="text"
+            name="name"
+            placeholder="Nombre completo"
+            required
           >
 
-            <path
-              d="M32 7l7 16 17 2-13 11 4 17-15-9-15 9 4-17L8 25l17-2z"
-              fill="currentColor"
-            />
+          <input
+            type="tel"
+            name="phone"
+            placeholder="Número de celular"
+            required
+          >
 
-          </svg>
+          <input
+            type="text"
+            name="city"
+            placeholder="Ciudad"
+            required
+          >
 
-        </div>
+          <input
+            type="text"
+            name="address"
+            placeholder="Dirección de entrega"
+            required
+          >
 
+          <textarea
+            name="note"
+            placeholder="Observación adicional (opcional)"
+          ></textarea>
 
-        <div>
+          <button
+            type="submit"
+          >
+            ENVIAR PEDIDO POR WHATSAPP
+          </button>
 
-          <b>
-            Productos seleccionados
-          </b>
-
-          <span>
-            Calidad, utilidad y buenos precios
-          </span>
-
-        </div>
+        </form>
 
       </div>
 
+    </div>
+
+
+    <!-- =========================================
+         OPINIONES DESTACADAS
+    ========================================== -->
+
+    <section class="reviews-section">
+
+      <div class="reviews-head">
+
+        <span>
+          OPINIONES DESTACADAS
+        </span>
+
+        <h2>
+          Lo que nuestros clientes
+          <strong>opinan</strong>
+        </h2>
+
+        <p>
+          Comentarios de ejemplo para mostrar cómo se verá esta sección.
+        </p>
+
+      </div>
+
+
+      <div class="reviews-grid">
+
+
+        <article class="review-card">
+
+          <div class="review-top">
+
+            <div class="review-avatar">
+              JM
+            </div>
+
+            <div>
+              <h3>
+                Juan Martínez
+              </h3>
+
+              <span>
+                Medellín
+              </span>
+            </div>
+
+          </div>
+
+          <div class="review-stars">
+            ★★★★★
+          </div>
+
+          <p>
+            “Me gustó mucho la presentación de la tienda y
+            la variedad de productos. La opción de pago contra
+            entrega es muy práctica.”
+          </p>
+
+        </article>
+
+
+        <article class="review-card">
+
+          <div class="review-top">
+
+            <div class="review-avatar">
+              CV
+            </div>
+
+            <div>
+              <h3>
+                Camila Vargas
+              </h3>
+
+              <span>
+                Bogotá
+              </span>
+            </div>
+
+          </div>
+
+          <div class="review-stars">
+            ★★★★★
+          </div>
+
+          <p>
+            “La página es fácil de usar y se pueden ver
+            varias imágenes del producto antes de hacer
+            el pedido.”
+          </p>
+
+        </article>
+
+
+        <article class="review-card">
+
+          <div class="review-top">
+
+            <div class="review-avatar">
+              DR
+            </div>
+
+            <div>
+              <h3>
+                Diego Rodríguez
+              </h3>
+
+              <span>
+                Cali
+              </span>
+            </div>
+
+          </div>
+
+          <div class="review-stars">
+            ★★★★★
+          </div>
+
+          <p>
+            “Me parece muy bueno poder consultar primero
+            por WhatsApp y luego realizar el pedido.
+            Todo está bastante claro.”
+          </p>
+
+        </article>
+
+
+        <article class="review-card">
+
+          <div class="review-top">
+
+            <div class="review-avatar">
+              LP
+            </div>
+
+            <div>
+              <h3>
+                Laura Pérez
+              </h3>
+
+              <span>
+                Pereira
+              </span>
+            </div>
+
+          </div>
+
+          <div class="review-stars">
+            ★★★★★
+          </div>
+
+          <p>
+            “Los precios y descuentos están muy claros.
+            Me gusta que la información del producto esté
+            organizada.”
+          </p>
+
+        </article>
+
+
+        <article class="review-card">
+
+          <div class="review-top">
+
+            <div class="review-avatar">
+              AS
+            </div>
+
+            <div>
+              <h3>
+                Andrés Sánchez
+              </h3>
+
+              <span>
+                Barranquilla
+              </span>
+            </div>
+
+          </div>
+
+          <div class="review-stars">
+            ★★★★★
+          </div>
+
+          <p>
+            “La experiencia de navegación es sencilla,
+            especialmente desde el celular. Se encuentran
+            rápido los productos.”
+          </p>
+
+        </article>
+
+
+        <article class="review-card">
+
+          <div class="review-top">
+
+            <div class="review-avatar">
+              MR
+            </div>
+
+            <div>
+              <h3>
+                Mariana Rojas
+              </h3>
+
+              <span>
+                Manizales
+              </span>
+            </div>
+
+          </div>
+
+          <div class="review-stars">
+            ★★★★★
+          </div>
+
+          <p>
+            “Me gusta que la tienda tenga contacto directo
+            por WhatsApp y que pueda revisar los detalles
+            de cada producto.”
+          </p>
+
+        </article>
+
+
+      </div>
+
+
+      <div class="reviews-note">
+
+        ⭐ Opiniones de ejemplo.
+        Esta sección puede actualizarse posteriormente
+        con comentarios reales de compradores.
+
+      </div>
 
     </section>
-
 
   </main>
 
 
-
-  <!-- =========================
-       MODAL PRODUCTO
-  ========================== -->
-
-  <div
-    class="modal hidden"
-    id="productModal"
-  >
-
-    <div class="modal-box product-modal">
-
-
-      <button
-        class="close"
-        data-close="productModal"
-      >
-        ×
-      </button>
-
-
-      <div class="gallery">
-
-        <img
-          id="mainImage"
-          src=""
-          alt=""
-        >
-
-
-        <div
-          class="thumbs"
-          id="thumbs"
-        ></div>
-
-      </div>
-
-
-      <div class="product-info">
-
-        <p class="eyebrow">
-          IMPORTADORA EL REBAJÓN
-        </p>
-
-
-        <h2 id="modalName"></h2>
-
-
-        <div
-          class="price"
-          id="modalPrice"
-        ></div>
-
-
-        <p id="modalDesc"></p>
-
-
-        <ul id="modalFeatures"></ul>
-
-
-        <button
-          class="cta full"
-          id="modalAdd"
-        >
-          AÑADIR AL CARRITO
-        </button>
-
-
-      </div>
-
-
-    </div>
-
-  </div>
-
-
-
-  <!-- =========================
-       CARRITO
-  ========================== -->
-
-  <aside
-    class="cart hidden"
-    id="cartPanel"
-  >
-
-    <div class="cart-head">
-
-      <h2>
-        Tu pedido
-      </h2>
-
-
-      <button
-        class="close"
-        id="closeCart"
-      >
-        ×
-      </button>
-
-    </div>
-
-
-    <div id="cartItems"></div>
-
-
-    <div class="cart-total">
-
-      <span>
-        Total
-      </span>
-
-      <strong id="cartTotal">
-        $0
-      </strong>
-
-    </div>
-
-
-    <button
-      class="cta full"
-      id="checkoutBtn"
-    >
-      CONTINUAR PEDIDO
-    </button>
-
-
-  </aside>
-
-
-
-  <div
-    class="overlay hidden"
-    id="overlay"
-  ></div>
-
-
-
-  <!-- =========================
-       CHECKOUT
-  ========================== -->
-
-  <div
-    class="modal hidden"
-    id="checkoutModal"
-  >
-
-    <div class="modal-box checkout">
-
-
-      <button
-        class="close"
-        data-close="checkoutModal"
-      >
-        ×
-      </button>
-
-
-      <p class="eyebrow">
-        ÚLTIMO PASO
-      </p>
-
-
-      <h2>
-        Datos para tu pedido
-      </h2>
-
-
-      <p>
-        Completa los datos y el pedido se abrirá listo para enviar por WhatsApp.
-      </p>
-
-
-      <form id="checkoutForm">
-
-
-        <input
-          required
-          name="name"
-          placeholder="Nombre completo"
-        >
-
-
-        <input
-          required
-          name="phone"
-          type="tel"
-          placeholder="Número de celular"
-        >
-
-
-        <input
-          required
-          name="city"
-          placeholder="Ciudad"
-        >
-
-
-        <input
-          required
-          name="address"
-          placeholder="Dirección de entrega"
-        >
-
-
-        <textarea
-          name="note"
-          placeholder="Barrio, referencia u observación (opcional)"
-        ></textarea>
-
-
-        <button
-          class="cta full"
-          type="submit"
-        >
-
-          🟢 ENVIAR PEDIDO POR WHATSAPP
-
-        </button>
-
-
-      </form>
-
-
-    </div>
-
-  </div>
-
-
-
-  <!-- =========================
+  <!-- =========================================
        WHATSAPP FLOTANTE
-  ========================== -->
+  ========================================== -->
 
   <a
     class="wa"
     id="waFloat"
     href="#"
-    aria-label="Contactar por WhatsApp"
     target="_blank"
     rel="noopener"
+    aria-label="WhatsApp"
   >
-
-    <svg
-      viewBox="0 0 32 32"
-      width="30"
-      height="30"
-      aria-hidden="true"
-    >
-
-      <path
-        fill="currentColor"
-        d="M19.11 17.23c-.28-.14-1.65-.81-1.9-.9-.25-.09-.44-.14-.62.14-.18.28-.71.9-.87 1.08-.16.18-.32.21-.6.07-.28-.14-1.17-.43-2.23-1.38-.82-.73-1.38-1.63-1.54-1.9-.16-.28-.02-.43.12-.57.13-.13.28-.32.42-.48.14-.16.18-.28.28-.46.09-.18.05-.35-.02-.49-.07-.14-.62-1.5-.85-2.06-.22-.54-.45-.47-.62-.48h-.53c-.18 0-.48.07-.74.35-.25.28-.97.95-.97 2.32s.99 2.69 1.13 2.87c.14.18 1.95 2.98 4.73 4.18.66.29 1.26.18 1.73.11.53-.08 1.65-.67 1.88-1.32.23-.65.23-1.2.16-1.32-.07-.12-.25-.18-.53-.32z"
-      />
-
-      <path
-        fill="currentColor"
-        d="M16.03 3.2c-7.07 0-12.8 5.73-12.8 12.8 0 2.26.59 4.46 1.72 6.4L3.2 28.8l6.59-1.72a12.76 12.76 0 0 0 6.24 1.62h.01c7.06 0 12.8-5.74 12.8-12.8S23.1 3.2 16.03 3.2zm0 23.4h-.01a10.6 10.6 0 0 1-5.4-1.48l-.39-.23-3.91 1.02 1.04-3.81-.25-.39a10.6 10.6 0 1 1 8.92 4.89z"
-      />
-
-    </svg>
-
+    💬
   </a>
 
 
-
-  <!-- =========================
+  <!-- =========================================
        FOOTER
-  ========================== -->
+  ========================================== -->
 
   <footer>
 
@@ -736,74 +748,63 @@
       IMPORTADORA EL REBAJÓN
     </strong>
 
+    <span>
+      Productos seleccionados · Ofertas · Atención por WhatsApp
+    </span>
+
+    <br><br>
 
     <span>
-      Compra fácil • Pago contra entrega • Envíos nacionales
+      © 2026 Importadora El Rebajón. Todos los derechos reservados.
     </span>
 
   </footer>
 
 
+  <!-- =========================================
+       SCRIPT
+  ========================================== -->
 
   <script src="script.js"></script>
 
 
-  <!-- =========================
-       MOSTRAR PRODUCTOS
-       AL PULSAR VER PRODUCTOS
-  ========================== -->
-
   <script>
 
-    document.addEventListener(
-      "DOMContentLoaded",
-      function () {
+    const heroWhatsapp =
+      document.querySelector("#heroWhatsapp");
 
-        const boton =
-          document.querySelector(
-            '.hero a[href="#productos"]'
-          );
+    if (heroWhatsapp) {
 
-        const productos =
-          document.querySelector(
-            "#productos"
-          );
+      heroWhatsapp.href =
+        "https://wa.me/573147636825";
+
+    }
 
 
-        if (!boton || !productos)
-          return;
+    const showProducts =
+      document.querySelector("#showProducts");
+
+    const productsSection =
+      document.querySelector("#productos");
 
 
-        boton.addEventListener(
-          "click",
-          function (e) {
+    if (showProducts && productsSection) {
 
-            e.preventDefault();
+      showProducts.addEventListener("click", function(e) {
 
-            productos.style.display =
-              "block";
+        e.preventDefault();
 
-            setTimeout(
-              function () {
+        productsSection.style.display = "block";
 
-                productos.scrollIntoView({
-                  behavior: "smooth",
-                  block: "start"
-                });
+        productsSection.scrollIntoView({
+          behavior: "smooth"
+        });
 
-              },
-              50
-            );
+      });
 
-          }
-        );
-
-      }
-    );
+    }
 
   </script>
 
-
 </body>
-
 </html>
