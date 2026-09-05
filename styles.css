@@ -1,6 +1,6 @@
 /* =========================================
    IMPORTADORA EL REBAJÓN
-   DISEÑO NEGRO + NARANJA
+   NEGRO + NARANJA
 ========================================= */
 
 * {
@@ -57,7 +57,6 @@ textarea {
   width: 58px;
   height: 58px;
   object-fit: contain;
-  display: block;
 }
 
 .brand strong {
@@ -81,7 +80,7 @@ textarea {
 
 
 /* =========================================
-   CARRITO DEL HEADER
+   CARRITO HEADER
 ========================================= */
 
 .cart-btn {
@@ -123,6 +122,7 @@ textarea {
 .hero {
   position: relative;
   overflow: hidden;
+
   background:
     radial-gradient(
       circle at 80% 30%,
@@ -211,9 +211,7 @@ textarea {
 
 .cta:hover {
   transform: translateY(-2px);
-  box-shadow:
-    0 8px 20px
-    rgba(244,123,32,.2);
+  box-shadow: 0 8px 20px rgba(244,123,32,.2);
 }
 
 .hero-whatsapp {
@@ -245,14 +243,9 @@ textarea {
   transform: translateY(-2px);
 }
 
-.hero-whatsapp svg {
-  width: 21px;
-  height: 21px;
-}
-
 
 /* =========================================
-   TARJETA DE OFERTA
+   TARJETA HERO
 ========================================= */
 
 .hero-card {
@@ -274,9 +267,7 @@ textarea {
 
   overflow: hidden;
 
-  box-shadow:
-    0 20px 50px
-    rgba(0,0,0,.4);
+  box-shadow: 0 20px 50px rgba(0,0,0,.4);
 }
 
 .hero-card::before {
@@ -289,8 +280,7 @@ textarea {
 
   border-radius: 50%;
 
-  background:
-    rgba(244,123,32,.18);
+  background: rgba(244,123,32,.18);
 
   top: -80px;
   right: -70px;
@@ -407,8 +397,7 @@ textarea {
 .grid {
   display: grid;
 
-  grid-template-columns:
-    repeat(3, 1fr);
+  grid-template-columns: repeat(3, 1fr);
 
   gap: 22px;
 
@@ -419,15 +408,13 @@ textarea {
 
 
 /* =========================================
-   PRODUCTOS
+   TARJETAS PRODUCTOS
 ========================================= */
 
 .card {
   background: #151515;
 
-  border:
-    1px solid
-    rgba(255,255,255,.08);
+  border: 1px solid rgba(255,255,255,.08);
 
   border-radius: 16px;
 
@@ -439,12 +426,9 @@ textarea {
 .card:hover {
   transform: translateY(-5px);
 
-  border-color:
-    rgba(244,123,32,.4);
+  border-color: rgba(244,123,32,.4);
 
-  box-shadow:
-    0 15px 35px
-    rgba(0,0,0,.35);
+  box-shadow: 0 15px 35px rgba(0,0,0,.35);
 }
 
 .card-img {
@@ -522,7 +506,7 @@ textarea {
 
 
 /* =========================================
-   CALIFICACIÓN
+   CALIFICACIONES
 ========================================= */
 
 .product-rating {
@@ -537,7 +521,8 @@ textarea {
   flex-wrap: wrap;
 }
 
-.stars {
+.stars,
+.review-stars {
   color: #f47b20;
 
   font-size: 15px;
@@ -559,7 +544,6 @@ textarea {
 
 .modal-rating {
   margin-top: 10px;
-
   margin-bottom: 15px;
 }
 
@@ -602,8 +586,7 @@ textarea {
 
   border-radius: 6px;
 
-  background:
-    rgba(244,123,32,.12);
+  background: rgba(244,123,32,.12);
 
   color: #f47b20;
 
@@ -616,14 +599,13 @@ textarea {
 
 
 /* =========================================
-   BOTONES
+   BOTONES PRODUCTO
 ========================================= */
 
 .actions {
   display: grid;
 
-  grid-template-columns:
-    1fr 1fr;
+  grid-template-columns: 1fr 1fr;
 
   gap: 8px;
 }
@@ -678,8 +660,7 @@ textarea {
 
   display: grid;
 
-  grid-template-columns:
-    repeat(4, 1fr);
+  grid-template-columns: repeat(4, 1fr);
 
   gap: 14px;
 }
@@ -687,9 +668,7 @@ textarea {
 .trust-card {
   background: #111;
 
-  border:
-    1px solid
-    rgba(255,255,255,.12);
+  border: 1px solid rgba(255,255,255,.12);
 
   border-radius: 16px;
 
@@ -703,21 +682,15 @@ textarea {
 
   color: white;
 
-  box-shadow:
-    0 8px 20px
-    rgba(0,0,0,.18);
+  box-shadow: 0 8px 20px rgba(0,0,0,.18);
 
-  transition:
-    transform .2s ease,
-    box-shadow .2s ease;
+  transition: .2s ease;
 }
 
 .trust-card:hover {
   transform: translateY(-4px);
 
-  box-shadow:
-    0 12px 28px
-    rgba(0,0,0,.28);
+  box-shadow: 0 12px 28px rgba(0,0,0,.28);
 }
 
 .trust-icon {
@@ -771,8 +744,7 @@ textarea {
 
   inset: 0;
 
-  background:
-    rgba(0,0,0,.8);
+  background: rgba(0,0,0,.8);
 
   display: flex;
 
@@ -829,8 +801,7 @@ textarea {
 .product-modal {
   display: grid;
 
-  grid-template-columns:
-    1fr 1fr;
+  grid-template-columns: 1fr 1fr;
 
   gap: 30px;
 }
@@ -870,9 +841,7 @@ textarea {
 
   border-radius: 8px;
 
-  border:
-    2px solid
-    transparent;
+  border: 2px solid transparent;
 
   cursor: pointer;
 }
@@ -911,8 +880,7 @@ textarea {
 
 
 /* =========================================
-   CARRITO
-   SOLO PANEL LATERAL
+   CARRITO LATERAL
 ========================================= */
 
 .cart {
@@ -927,8 +895,7 @@ textarea {
 
   background: #111;
 
-  border-left:
-    1px solid #333;
+  border-left: 1px solid #333;
 
   z-index: 3000;
 
@@ -936,9 +903,7 @@ textarea {
 
   overflow-y: auto;
 
-  box-shadow:
-    -15px 0 45px
-    rgba(0,0,0,.55);
+  box-shadow: -15px 0 45px rgba(0,0,0,.55);
 }
 
 .cart.hidden {
@@ -952,8 +917,7 @@ textarea {
 
   align-items: center;
 
-  border-bottom:
-    1px solid #333;
+  border-bottom: 1px solid #333;
 
   padding-bottom: 16px;
 
@@ -977,8 +941,7 @@ textarea {
 .cart-item {
   display: grid;
 
-  grid-template-columns:
-    65px 1fr auto;
+  grid-template-columns: 65px 1fr auto;
 
   gap: 10px;
 
@@ -986,8 +949,7 @@ textarea {
 
   padding: 15px 0;
 
-  border-bottom:
-    1px solid #292929;
+  border-bottom: 1px solid #292929;
 }
 
 .cart-item img {
@@ -1023,8 +985,7 @@ textarea {
   width: 28px;
   height: 28px;
 
-  border:
-    1px solid #444;
+  border: 1px solid #444;
 
   background: #222;
 
@@ -1052,8 +1013,7 @@ textarea {
 
   padding-top: 20px;
 
-  border-top:
-    1px solid #333;
+  border-top: 1px solid #333;
 
   font-size: 20px;
 
@@ -1078,8 +1038,7 @@ textarea {
 
   inset: 0;
 
-  background:
-    rgba(0,0,0,.7);
+  background: rgba(0,0,0,.7);
 
   z-index: 2500;
 }
@@ -1111,8 +1070,7 @@ textarea {
 
   color: #fff;
 
-  border:
-    1px solid #333;
+  border: 1px solid #333;
 
   border-radius: 8px;
 
@@ -1150,6 +1108,172 @@ textarea {
 
 
 /* =========================================
+   OPINIONES
+========================================= */
+
+.reviews-section {
+  background: #101010;
+
+  padding: 70px 5% 65px;
+
+  border-top: 1px solid #222;
+}
+
+.reviews-head {
+  max-width: 800px;
+
+  margin: 0 auto 40px;
+
+  text-align: center;
+}
+
+.reviews-head > span {
+  display: inline-block;
+
+  color: #f47b20;
+
+  font-size: 12px;
+
+  font-weight: 900;
+
+  letter-spacing: 2px;
+
+  margin-bottom: 10px;
+}
+
+.reviews-head h2 {
+  margin: 0;
+
+  font-size: clamp(28px, 4vw, 42px);
+
+  line-height: 1.1;
+}
+
+.reviews-head h2 strong {
+  color: #f47b20;
+}
+
+.reviews-head p {
+  color: #888;
+
+  font-size: 14px;
+
+  line-height: 1.5;
+
+  margin-top: 14px;
+}
+
+.reviews-grid {
+  max-width: 1200px;
+
+  margin: auto;
+
+  display: grid;
+
+  grid-template-columns:
+    repeat(3, 1fr);
+
+  gap: 18px;
+}
+
+.review-card {
+  background: #171717;
+
+  border: 1px solid #292929;
+
+  border-radius: 15px;
+
+  padding: 20px;
+
+  transition: .2s ease;
+}
+
+.review-card:hover {
+  transform: translateY(-4px);
+
+  border-color: rgba(244,123,32,.45);
+
+  box-shadow: 0 12px 30px rgba(0,0,0,.3);
+}
+
+.review-top {
+  display: flex;
+
+  align-items: center;
+
+  gap: 12px;
+}
+
+.review-avatar {
+  width: 45px;
+  height: 45px;
+
+  min-width: 45px;
+
+  border-radius: 50%;
+
+  background: #f47b20;
+
+  color: #111;
+
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  font-size: 13px;
+
+  font-weight: 900;
+}
+
+.review-card h3 {
+  margin: 0;
+
+  font-size: 14px;
+}
+
+.review-card .review-top span {
+  display: block;
+
+  margin-top: 3px;
+
+  color: #777;
+
+  font-size: 11px;
+}
+
+.review-stars {
+  margin-top: 15px;
+
+  font-size: 14px;
+}
+
+.review-card p {
+  color: #b5b5b5;
+
+  font-size: 13px;
+
+  line-height: 1.6;
+
+  margin: 10px 0 0;
+}
+
+.reviews-note {
+  max-width: 800px;
+
+  margin: 30px auto 0;
+
+  text-align: center;
+
+  color: #666;
+
+  font-size: 11px;
+
+  line-height: 1.5;
+}
+
+
+/* =========================================
    WHATSAPP
 ========================================= */
 
@@ -1179,9 +1303,7 @@ textarea {
 
   z-index: 1500;
 
-  box-shadow:
-    0 8px 25px
-    rgba(0,0,0,.35);
+  box-shadow: 0 8px 25px rgba(0,0,0,.35);
 }
 
 .wa:hover {
@@ -1196,8 +1318,7 @@ textarea {
 footer {
   background: #090909;
 
-  border-top:
-    1px solid #222;
+  border-top: 1px solid #222;
 
   padding: 35px 5%;
 
@@ -1249,17 +1370,19 @@ footer span {
   }
 
   .grid {
-    grid-template-columns:
-      repeat(2, 1fr);
+    grid-template-columns: repeat(2, 1fr);
   }
 
   .trust {
-    grid-template-columns:
-      repeat(2, 1fr);
+    grid-template-columns: repeat(2, 1fr);
   }
 
   .product-modal {
     grid-template-columns: 1fr;
+  }
+
+  .reviews-grid {
+    grid-template-columns: repeat(2, 1fr);
   }
 }
 
@@ -1291,6 +1414,7 @@ footer span {
 
   .brand span {
     font-size: 15px;
+
     margin-top: 4px;
   }
 
@@ -1406,6 +1530,15 @@ footer span {
 
     padding: 18px;
   }
+
+  .reviews-section {
+    padding: 50px 4%;
+  }
+
+  .reviews-grid {
+    grid-template-columns: 1fr;
+  }
+
 }
 
 
@@ -1451,4 +1584,13 @@ footer span {
 
     padding: 18px;
   }
+
+  .reviews-head h2 {
+    font-size: 28px;
+  }
+
+  .review-card {
+    padding: 17px;
+  }
+
 }
