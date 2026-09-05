@@ -12,7 +12,7 @@
 
   <meta
     name="description"
-    content="Importadora El Rebajón — productos seleccionados, precios especiales y pago contra entrega."
+    content="Importadora El Rebajón — ofertas, productos seleccionados y pago contra entrega."
   >
 
   <title>Importadora El Rebajón</title>
@@ -75,14 +75,14 @@
 
 
   <!-- =========================
-       CONTENIDO PRINCIPAL
+       CONTENIDO
   ========================== -->
 
   <main>
 
 
     <!-- =========================
-         HERO
+         PORTADA / OFERTAS
     ========================== -->
 
     <section class="hero">
@@ -96,10 +96,10 @@
 
         <h1>
 
-          Compra mejor.<br>
+          ¡NO TE PIERDAS<br>
 
           <em>
-            Paga menos.
+            ESTAS OFERTAS!
           </em>
 
         </h1>
@@ -107,9 +107,15 @@
 
         <p class="hero-text">
 
-          Encuentra productos seleccionados, precios especiales y ofertas
-          que realmente valen la pena. Compra fácil y recibe tu pedido
-          directamente en tu ciudad.
+          Productos seleccionados, precios especiales y oportunidades
+          que realmente valen la pena.
+
+          <br><br>
+
+          Compra fácil, recibe en tu ciudad y
+          <strong>
+            paga contra entrega.
+          </strong>
 
         </p>
 
@@ -121,7 +127,9 @@
             class="cta"
             href="#productos"
           >
-            VER PRODUCTOS
+
+            🛍️ VER PRODUCTOS
+
           </a>
 
 
@@ -153,9 +161,11 @@
 
           </a>
 
+
         </div>
 
       </div>
+
 
 
       <div class="hero-card">
@@ -163,7 +173,7 @@
         <div class="hero-offer">
 
           <span>
-            OFERTAS
+            SOLO POR TIEMPO LIMITADO
           </span>
 
           <strong>
@@ -183,17 +193,20 @@
 
       </div>
 
+
     </section>
 
 
 
     <!-- =========================
          PRODUCTOS
+         OCULTOS AL INICIO
     ========================== -->
 
     <section
       class="products-section"
       id="productos"
+      style="display: none;"
     >
 
       <div class="section-head">
@@ -228,6 +241,7 @@
         id="products"
       ></div>
 
+
     </section>
 
 
@@ -238,8 +252,6 @@
 
     <section class="trust">
 
-
-      <!-- ENVÍOS -->
 
       <div class="trust-card">
 
@@ -302,8 +314,6 @@
       </div>
 
 
-
-      <!-- PAGO -->
 
       <div class="trust-card">
 
@@ -368,8 +378,6 @@
 
 
 
-      <!-- WHATSAPP -->
-
       <div class="trust-card">
 
         <div class="trust-icon">
@@ -411,8 +419,6 @@
       </div>
 
 
-
-      <!-- PRODUCTOS -->
 
       <div class="trust-card">
 
@@ -521,6 +527,7 @@
           AÑADIR AL CARRITO
         </button>
 
+
       </div>
 
 
@@ -538,7 +545,6 @@
     class="cart hidden"
     id="cartPanel"
   >
-
 
     <div class="cart-head">
 
@@ -584,8 +590,6 @@
   </aside>
 
 
-
-  <!-- FONDO DEL CARRITO -->
 
   <div
     class="overlay hidden"
@@ -741,12 +745,65 @@
 
 
 
-  <!-- JAVASCRIPT -->
-
   <script src="script.js"></script>
+
+
+  <!-- =========================
+       MOSTRAR PRODUCTOS
+       AL PULSAR VER PRODUCTOS
+  ========================== -->
+
+  <script>
+
+    document.addEventListener(
+      "DOMContentLoaded",
+      function () {
+
+        const boton =
+          document.querySelector(
+            '.hero a[href="#productos"]'
+          );
+
+        const productos =
+          document.querySelector(
+            "#productos"
+          );
+
+
+        if (!boton || !productos)
+          return;
+
+
+        boton.addEventListener(
+          "click",
+          function (e) {
+
+            e.preventDefault();
+
+            productos.style.display =
+              "block";
+
+            setTimeout(
+              function () {
+
+                productos.scrollIntoView({
+                  behavior: "smooth",
+                  block: "start"
+                });
+
+              },
+              50
+            );
+
+          }
+        );
+
+      }
+    );
+
+  </script>
 
 
 </body>
 
 </html>
-
