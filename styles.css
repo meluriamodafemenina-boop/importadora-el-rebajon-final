@@ -50,39 +50,50 @@ textarea {
 .brand {
   display: flex;
   align-items: center;
-  gap: 12px;
+  gap: 14px;
 }
 
 .brand-logo {
-  width: 50px;
-  height: 50px;
+  width: 58px;
+  height: 58px;
   object-fit: contain;
   display: block;
 }
 
 .brand strong {
   display: block;
-  font-size: 16px;
+  font-size: 22px;
   font-weight: 900;
+  line-height: 1;
   color: #fff;
+  letter-spacing: .7px;
 }
 
 .brand span {
   display: block;
-  font-size: 14px;
+  font-size: 20px;
   font-weight: 900;
+  line-height: 1;
   color: #f47b20;
+  margin-top: 5px;
+  letter-spacing: .7px;
 }
+
+
+/* =========================================
+   CARRITO DEL HEADER
+========================================= */
 
 .cart-btn {
   background: #f47b20;
   color: #111;
   border: none;
-  padding: 11px 16px;
+  padding: 12px 17px;
   border-radius: 9px;
   font-weight: 900;
   cursor: pointer;
   transition: .2s ease;
+  white-space: nowrap;
 }
 
 .cart-btn:hover {
@@ -113,10 +124,20 @@ textarea {
   position: relative;
   overflow: hidden;
   background:
-    radial-gradient(circle at 80% 30%, rgba(244,123,32,.16), transparent 35%),
-    linear-gradient(135deg, #0b0b0b, #151515);
+    radial-gradient(
+      circle at 80% 30%,
+      rgba(244,123,32,.16),
+      transparent 35%
+    ),
+    linear-gradient(
+      135deg,
+      #0b0b0b,
+      #151515
+    );
+
   padding: 70px 5%;
   min-height: 600px;
+
   display: flex;
   align-items: center;
 }
@@ -170,34 +191,50 @@ textarea {
   display: inline-flex;
   align-items: center;
   justify-content: center;
+
   padding: 14px 20px;
+
   background: #f47b20;
   color: #111;
+
   text-decoration: none;
+
   border-radius: 10px;
-  font-weight: 900;
   border: none;
+
+  font-weight: 900;
+
   cursor: pointer;
+
   transition: .2s ease;
 }
 
 .cta:hover {
   transform: translateY(-2px);
-  box-shadow: 0 8px 20px rgba(244,123,32,.2);
+  box-shadow:
+    0 8px 20px
+    rgba(244,123,32,.2);
 }
 
 .hero-whatsapp {
   display: inline-flex;
   align-items: center;
   justify-content: center;
+
   gap: 9px;
+
   padding: 14px 20px;
+
   border: 1px solid rgba(255,255,255,.2);
   border-radius: 10px;
+
   color: white;
+
   text-decoration: none;
+
   font-weight: 800;
   font-size: 13px;
+
   transition: .2s ease;
 }
 
@@ -213,27 +250,48 @@ textarea {
   height: 21px;
 }
 
+
+/* =========================================
+   TARJETA DE OFERTA
+========================================= */
+
 .hero-card {
   position: absolute;
+
   right: 7%;
   top: 50%;
+
   transform: translateY(-50%);
+
   width: 350px;
   min-height: 300px;
+
   background: #111;
+
   border: 1px solid rgba(255,255,255,.1);
+
   border-radius: 22px;
+
   overflow: hidden;
-  box-shadow: 0 20px 50px rgba(0,0,0,.4);
+
+  box-shadow:
+    0 20px 50px
+    rgba(0,0,0,.4);
 }
 
 .hero-card::before {
   content: "";
+
   position: absolute;
+
   width: 220px;
   height: 220px;
+
   border-radius: 50%;
-  background: rgba(244,123,32,.18);
+
+  background:
+    rgba(244,123,32,.18);
+
   top: -80px;
   right: -70px;
 }
@@ -241,38 +299,55 @@ textarea {
 .hero-offer {
   position: relative;
   z-index: 2;
+
   display: flex;
+
   flex-direction: column;
+
   align-items: center;
+
   justify-content: center;
+
   text-align: center;
+
   height: 100%;
+
   min-height: 300px;
+
   padding: 25px;
 }
 
 .hero-offer span {
   font-size: 12px;
+
   font-weight: 900;
+
   letter-spacing: 3px;
+
   color: #f47b20;
 }
 
 .hero-offer strong {
   font-size: 65px;
+
   line-height: 1;
+
   margin: 15px 0;
 }
 
 .hero-offer b {
   font-size: 25px;
+
   line-height: 1.05;
+
   letter-spacing: 1px;
 }
 
 .hero-offer small {
   margin-top: 15px;
+
   color: #aaa;
+
   font-size: 12px;
 }
 
@@ -288,10 +363,15 @@ textarea {
 
 .section-head {
   max-width: 1200px;
+
   margin: 0 auto 35px;
+
   display: flex;
+
   align-items: flex-end;
+
   justify-content: space-between;
+
   gap: 20px;
 }
 
@@ -306,11 +386,17 @@ textarea {
 
 .section-head input {
   width: 240px;
+
   background: #181818;
+
   border: 1px solid #333;
+
   border-radius: 9px;
+
   padding: 12px 14px;
+
   color: #fff;
+
   outline: none;
 }
 
@@ -320,46 +406,70 @@ textarea {
 
 .grid {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+
+  grid-template-columns:
+    repeat(3, 1fr);
+
   gap: 22px;
+
   max-width: 1200px;
+
   margin: auto;
 }
 
 
 /* =========================================
-   TARJETAS
+   PRODUCTOS
 ========================================= */
 
 .card {
   background: #151515;
-  border: 1px solid rgba(255,255,255,.08);
+
+  border:
+    1px solid
+    rgba(255,255,255,.08);
+
   border-radius: 16px;
+
   overflow: hidden;
+
   transition: .25s ease;
 }
 
 .card:hover {
   transform: translateY(-5px);
-  border-color: rgba(244,123,32,.4);
-  box-shadow: 0 15px 35px rgba(0,0,0,.35);
+
+  border-color:
+    rgba(244,123,32,.4);
+
+  box-shadow:
+    0 15px 35px
+    rgba(0,0,0,.35);
 }
 
 .card-img {
   height: 280px;
+
   background: #101010;
+
   position: relative;
+
   display: flex;
+
   align-items: center;
   justify-content: center;
+
   cursor: pointer;
+
   overflow: hidden;
 }
 
 .card-img img {
   width: 100%;
   height: 100%;
+
   object-fit: contain;
+
   transition: .25s ease;
 }
 
@@ -369,14 +479,22 @@ textarea {
 
 .badge {
   position: absolute;
+
   top: 12px;
   left: 12px;
+
   z-index: 3;
+
   background: #f47b20;
+
   color: #111;
+
   padding: 6px 9px;
+
   border-radius: 6px;
+
   font-size: 11px;
+
   font-weight: 900;
 }
 
@@ -386,14 +504,19 @@ textarea {
 
 .card-body h3 {
   margin: 0;
+
   font-size: 18px;
+
   line-height: 1.3;
 }
 
 .desc {
   color: #999;
+
   font-size: 13px;
+
   line-height: 1.5;
+
   margin-top: 10px;
 }
 
@@ -404,30 +527,39 @@ textarea {
 
 .product-rating {
   display: flex;
+
   align-items: center;
+
   gap: 7px;
+
   margin: 8px 0 10px;
+
   flex-wrap: wrap;
 }
 
 .stars {
   color: #f47b20;
+
   font-size: 15px;
+
   letter-spacing: 1px;
 }
 
 .product-rating b {
   color: #fff;
+
   font-size: 13px;
 }
 
 .rating-text {
   color: #888;
+
   font-size: 11px;
 }
 
 .modal-rating {
   margin-top: 10px;
+
   margin-bottom: 15px;
 }
 
@@ -442,66 +574,95 @@ textarea {
 
 .old-price {
   color: #888;
+
   font-size: 13px;
+
   text-decoration: line-through;
+
   margin-bottom: 4px;
 }
 
 .price-box .price,
 .product-info .price {
   color: #f47b20;
+
   font-size: 24px;
+
   font-weight: 900;
+
   line-height: 1.1;
 }
 
 .saving {
   display: inline-block;
+
   margin-top: 7px;
+
   padding: 5px 9px;
+
   border-radius: 6px;
-  background: rgba(244,123,32,.12);
+
+  background:
+    rgba(244,123,32,.12);
+
   color: #f47b20;
+
   font-size: 11px;
+
   font-weight: 900;
+
   letter-spacing: .3px;
 }
 
 
 /* =========================================
-   BOTONES PRODUCTOS
+   BOTONES
 ========================================= */
 
 .actions {
   display: grid;
-  grid-template-columns: 1fr 1fr;
+
+  grid-template-columns:
+    1fr 1fr;
+
   gap: 8px;
 }
 
 .actions button {
   padding: 12px;
+
   border-radius: 8px;
+
   border: 1px solid #333;
+
   background: transparent;
+
   color: #fff;
+
   font-size: 11px;
+
   font-weight: 900;
+
   cursor: pointer;
 }
 
 .actions button:hover {
   border-color: #f47b20;
+
   color: #f47b20;
 }
 
 .actions .add {
   background: #f47b20;
+
   border-color: #f47b20;
+
   color: #111;
 }
 
 .actions .add:hover {
   background: #ff8b35;
+
   color: #111;
 }
 
@@ -512,38 +673,67 @@ textarea {
 
 .trust {
   background: #f47b20;
+
   padding: 22px 5%;
+
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
+
+  grid-template-columns:
+    repeat(4, 1fr);
+
   gap: 14px;
 }
 
 .trust-card {
   background: #111;
-  border: 1px solid rgba(255,255,255,.12);
+
+  border:
+    1px solid
+    rgba(255,255,255,.12);
+
   border-radius: 16px;
+
   padding: 18px;
+
   display: flex;
+
   align-items: center;
+
   gap: 14px;
+
   color: white;
-  box-shadow: 0 8px 20px rgba(0,0,0,.18);
-  transition: transform .2s ease, box-shadow .2s ease;
+
+  box-shadow:
+    0 8px 20px
+    rgba(0,0,0,.18);
+
+  transition:
+    transform .2s ease,
+    box-shadow .2s ease;
 }
 
 .trust-card:hover {
   transform: translateY(-4px);
-  box-shadow: 0 12px 28px rgba(0,0,0,.28);
+
+  box-shadow:
+    0 12px 28px
+    rgba(0,0,0,.28);
 }
 
 .trust-icon {
   width: 48px;
   height: 48px;
+
   min-width: 48px;
+
   border-radius: 13px;
+
   background: #f47b20;
+
   color: #111;
+
   display: flex;
+
   align-items: center;
   justify-content: center;
 }
@@ -555,14 +745,19 @@ textarea {
 
 .trust-card b {
   display: block;
+
   font-size: 15px;
+
   margin-bottom: 4px;
 }
 
 .trust-card span {
   display: block;
+
   color: #bdbdbd;
+
   font-size: 12px;
+
   line-height: 1.4;
 }
 
@@ -573,12 +768,20 @@ textarea {
 
 .modal {
   position: fixed;
+
   inset: 0;
-  background: rgba(0,0,0,.8);
+
+  background:
+    rgba(0,0,0,.8);
+
   display: flex;
+
   align-items: center;
+
   justify-content: center;
+
   padding: 20px;
+
   z-index: 2000;
 }
 
@@ -588,30 +791,47 @@ textarea {
 
 .modal-box {
   width: min(950px, 100%);
+
   max-height: 90vh;
+
   overflow-y: auto;
+
   background: #151515;
+
   border: 1px solid #333;
+
   border-radius: 18px;
+
   padding: 25px;
+
   position: relative;
 }
 
 .close {
   position: absolute;
+
   top: 12px;
   right: 15px;
+
   background: transparent;
+
   border: none;
+
   color: #fff;
+
   font-size: 28px;
+
   cursor: pointer;
+
   z-index: 5;
 }
 
 .product-modal {
   display: grid;
-  grid-template-columns: 1fr 1fr;
+
+  grid-template-columns:
+    1fr 1fr;
+
   gap: 30px;
 }
 
@@ -621,25 +841,39 @@ textarea {
 
 #mainImage {
   width: 100%;
+
   height: 430px;
+
   object-fit: contain;
+
   background: #101010;
+
   border-radius: 12px;
 }
 
 .thumbs {
   display: flex;
+
   gap: 8px;
+
   margin-top: 10px;
+
   overflow-x: auto;
 }
 
 .thumbs img {
   width: 70px;
+
   height: 70px;
+
   object-fit: cover;
+
   border-radius: 8px;
-  border: 2px solid transparent;
+
+  border:
+    2px solid
+    transparent;
+
   cursor: pointer;
 }
 
@@ -649,17 +883,21 @@ textarea {
 
 .product-info h2 {
   margin-top: 0;
+
   font-size: 30px;
 }
 
 .product-info p {
   color: #aaa;
+
   line-height: 1.6;
 }
 
 .product-info ul {
   color: #ddd;
+
   line-height: 2;
+
   padding-left: 20px;
 }
 
@@ -673,21 +911,34 @@ textarea {
 
 
 /* =========================================
-   CARRITO — PANEL LATERAL
+   CARRITO
+   SOLO PANEL LATERAL
 ========================================= */
 
 .cart {
   position: fixed;
+
   top: 0;
   right: 0;
+
   width: min(430px, 94vw);
+
   height: 100vh;
+
   background: #111;
-  border-left: 1px solid #333;
+
+  border-left:
+    1px solid #333;
+
   z-index: 3000;
+
   padding: 24px;
+
   overflow-y: auto;
-  box-shadow: -15px 0 45px rgba(0,0,0,.55);
+
+  box-shadow:
+    -15px 0 45px
+    rgba(0,0,0,.55);
 }
 
 .cart.hidden {
@@ -696,43 +947,63 @@ textarea {
 
 .cart-head {
   display: flex;
+
   justify-content: space-between;
+
   align-items: center;
-  border-bottom: 1px solid #333;
+
+  border-bottom:
+    1px solid #333;
+
   padding-bottom: 16px;
+
   margin-bottom: 5px;
 }
 
 .cart-head h2 {
   margin: 0;
+
   font-size: 24px;
 }
 
 .cart-head .close {
   position: static;
+
   font-size: 30px;
+
   padding: 0 5px;
 }
 
 .cart-item {
   display: grid;
-  grid-template-columns: 65px 1fr auto;
+
+  grid-template-columns:
+    65px 1fr auto;
+
   gap: 10px;
+
   align-items: center;
+
   padding: 15px 0;
-  border-bottom: 1px solid #292929;
+
+  border-bottom:
+    1px solid #292929;
 }
 
 .cart-item img {
   width: 65px;
   height: 65px;
+
   object-fit: contain;
+
   background: #181818;
+
   border-radius: 8px;
 }
 
 .cart-item h4 {
   margin: 0 0 5px;
+
   font-size: 13px;
 }
 
@@ -742,33 +1013,50 @@ textarea {
 
 .qty {
   display: flex;
+
   align-items: center;
+
   gap: 7px;
 }
 
 .qty button {
   width: 28px;
   height: 28px;
-  border: 1px solid #444;
+
+  border:
+    1px solid #444;
+
   background: #222;
+
   color: #fff;
+
   border-radius: 5px;
+
   cursor: pointer;
 }
 
 .qty button:hover {
   border-color: #f47b20;
+
   color: #f47b20;
 }
 
 .cart-total {
   display: flex;
+
   justify-content: space-between;
+
   align-items: center;
+
   margin-top: 25px;
+
   padding-top: 20px;
-  border-top: 1px solid #333;
+
+  border-top:
+    1px solid #333;
+
   font-size: 20px;
+
   font-weight: 900;
 }
 
@@ -787,8 +1075,12 @@ textarea {
 
 .overlay {
   position: fixed;
+
   inset: 0;
-  background: rgba(0,0,0,.7);
+
+  background:
+    rgba(0,0,0,.7);
+
   z-index: 2500;
 }
 
@@ -807,17 +1099,25 @@ textarea {
 
 #checkoutForm {
   display: grid;
+
   gap: 12px;
 }
 
 #checkoutForm input,
 #checkoutForm textarea {
   width: 100%;
+
   background: #202020;
+
   color: #fff;
-  border: 1px solid #333;
+
+  border:
+    1px solid #333;
+
   border-radius: 8px;
+
   padding: 13px;
+
   outline: none;
 }
 
@@ -828,40 +1128,60 @@ textarea {
 
 #checkoutForm textarea {
   min-height: 100px;
+
   resize: vertical;
 }
 
 #checkoutForm button {
   background: #f47b20;
+
   color: #111;
+
   border: none;
+
   padding: 15px;
+
   border-radius: 8px;
+
   font-weight: 900;
+
   cursor: pointer;
 }
 
 
 /* =========================================
-   WHATSAPP FLOTANTE
+   WHATSAPP
 ========================================= */
 
 .wa {
   position: fixed;
+
   right: 20px;
   bottom: 20px;
+
   width: 58px;
   height: 58px;
+
   border-radius: 50%;
+
   background: #25d366;
+
   color: white;
+
   display: flex;
+
   align-items: center;
   justify-content: center;
+
   text-decoration: none;
+
   font-size: 28px;
+
   z-index: 1500;
-  box-shadow: 0 8px 25px rgba(0,0,0,.35);
+
+  box-shadow:
+    0 8px 25px
+    rgba(0,0,0,.35);
 }
 
 .wa:hover {
@@ -875,51 +1195,67 @@ textarea {
 
 footer {
   background: #090909;
-  border-top: 1px solid #222;
+
+  border-top:
+    1px solid #222;
+
   padding: 35px 5%;
+
   text-align: center;
 }
 
 footer strong {
   display: block;
+
   color: #f47b20;
+
   font-size: 18px;
+
   margin-bottom: 8px;
 }
 
 footer span {
   color: #777;
+
   font-size: 12px;
 }
 
 
 /* =========================================
-   RESPONSIVE
+   TABLET
 ========================================= */
 
 @media (max-width: 1000px) {
 
   .hero-card {
     position: relative;
+
     right: auto;
     top: auto;
+
     transform: none;
+
     width: 100%;
+
     max-width: 500px;
+
     margin: 40px auto 0;
   }
 
   .hero {
     padding: 55px 5%;
+
     display: block;
   }
 
   .grid {
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns:
+      repeat(2, 1fr);
   }
 
   .trust {
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns:
+      repeat(2, 1fr);
   }
 
   .product-modal {
@@ -928,27 +1264,39 @@ footer span {
 }
 
 
+/* =========================================
+   CELULAR
+========================================= */
+
 @media (max-width: 700px) {
 
   .topbar {
     padding: 10px 4%;
+
+    gap: 10px;
   }
 
-  .brand strong {
-    font-size: 13px;
-  }
-
-  .brand span {
-    font-size: 11px;
+  .brand {
+    gap: 9px;
   }
 
   .brand-logo {
-    width: 42px;
-    height: 42px;
+    width: 46px;
+    height: 46px;
+  }
+
+  .brand strong {
+    font-size: 17px;
+  }
+
+  .brand span {
+    font-size: 15px;
+    margin-top: 4px;
   }
 
   .cart-btn {
     padding: 9px 10px;
+
     font-size: 11px;
   }
 
@@ -962,6 +1310,7 @@ footer span {
 
   .hero-buttons {
     flex-direction: column;
+
     align-items: stretch;
   }
 
@@ -988,6 +1337,7 @@ footer span {
 
   .section-head {
     align-items: stretch;
+
     flex-direction: column;
   }
 
@@ -1017,17 +1367,20 @@ footer span {
 
   .trust {
     padding: 15px;
+
     gap: 10px;
   }
 
   .trust-card {
     padding: 13px;
+
     gap: 10px;
   }
 
   .trust-icon {
     width: 40px;
     height: 40px;
+
     min-width: 40px;
   }
 
@@ -1050,15 +1403,35 @@ footer span {
 
   .cart {
     width: 94vw;
+
     padding: 18px;
   }
 }
 
 
+/* =========================================
+   CELULARES PEQUEÑOS
+========================================= */
+
 @media (max-width: 450px) {
 
-  .brand div {
-    display: none;
+  .brand strong {
+    font-size: 15px;
+  }
+
+  .brand span {
+    font-size: 13px;
+  }
+
+  .brand-logo {
+    width: 42px;
+    height: 42px;
+  }
+
+  .cart-btn {
+    font-size: 10px;
+
+    padding: 8px 9px;
   }
 
   .card-body {
@@ -1075,6 +1448,7 @@ footer span {
 
   .cart {
     width: 100%;
+
     padding: 18px;
   }
 }
